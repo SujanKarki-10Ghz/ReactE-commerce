@@ -6,26 +6,6 @@ const FeaturedProducts = ({ type }) => {
   const { data, loading, error } = useFetch(
     `/products?populate=*&[filters][type][$eq]=${type}`
   );
-  // const [data, setData] = useState([]);
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const res = await axios.get(
-  //         import.meta.env.VITE_API_URL +
-  //           `/products?populate=*&[filters][type][$eq]=${type}`,
-  //         {
-  //           headers: {
-  //             Authorization: `bearer ${import.meta.env.VITE_API_TOKEN}`,
-  //           },
-  //         }
-  //       );
-  //       setData(res.data.data);
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   };
-  //   fetchData();
-  // }, []);
 
   return (
     <div className="featuredProducts">
